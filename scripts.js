@@ -39,15 +39,17 @@ for (let i = 0; i < 3; i++) {
     description: description,
     status: status,
   });
-
 } 
 console.log("All Tasks:", tasks);
 
-/*
+  // Display completed tasks or motivational message
+let completedTasks = tasks.filter(function(task) {
+  return task.status === "done";
+});
 
-
-// If neither task1 nor task2 is done, show a motivational message
-if (task1Status !== "done" && task2Status !== "done") {
+if (completedTasks.length > 0) {
+    console.log("Completed Task:", completedTasks);
+} else {  
   console.log("No tasks completed, let's get to work!");
 }
-*/
+
