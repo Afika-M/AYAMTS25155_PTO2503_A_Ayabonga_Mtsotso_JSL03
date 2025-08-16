@@ -1,4 +1,4 @@
-const initialTasks = [
+const tasks = [
   {
     id: 1,
     title: "Launch Epic Career",
@@ -31,18 +31,20 @@ for (let i = 0; i < 3; i++) {
     alert("Invalid status. Please enter 'todo', 'doing', or 'done'.");
     status = prompt("Enter the status (todo, doing, done):").toLowerCase();
   }
+
+  // Add the new task to the tasks array
+  tasks.push({
+    id: tasks.length + 1,
+    title: title,
+    description: description,
+    status: status,
+  });
+
 } 
+console.log("All Tasks:", tasks);
 
 /*
-// Check if task1 is done, and log it if so
-if (task1Status === "done") {
-  console.log("Title: " + task1Title + ", status: " + task1Status);
-}
 
-// Check if task2 is done, and log it if so
-if (task2Status === "done") {
-  console.log("Title: " + task2Title + ", status: " + task2Status);
-}
 
 // If neither task1 nor task2 is done, show a motivational message
 if (task1Status !== "done" && task2Status !== "done") {
