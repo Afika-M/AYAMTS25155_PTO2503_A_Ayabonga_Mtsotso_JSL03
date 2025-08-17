@@ -1,3 +1,4 @@
+// Initial task list
 const tasks = [
   {
     id: 1,
@@ -18,10 +19,12 @@ const tasks = [
       "Gain practical experience and collaborate with others in the software development community",
     status: "done",
   },
-]
+];
+
+let taskLimit = 6;
 
 // Ask the user for the title, description, and status then  make sure the status is in lowercase
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < taskLimit; i++) {
   let title = prompt("Enter title for task " + (i + 1) + ":");
   let description = prompt("Enter description for task " + (i + 1) + ":");
   let status = prompt("Enter status for task " + (i + 1) + " (todo, doing, done):").toLowerCase();
@@ -39,6 +42,12 @@ for (let i = 0; i < 3; i++) {
     description: description,
     status: status,
   });
+  // Check if the task limit has been reached
+if (tasks.length === taskLimit) {
+    alert("There are enough tasks on your board, please check them in the console");
+    break;
+  }
+
 } 
 console.log("All Tasks:", tasks);
 
