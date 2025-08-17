@@ -1,38 +1,64 @@
-# JSL03 Project Brief: Console-Based Task Manager
+# 📝 Kanban Task Board
 
-## Important Prerequisite
+A simple task management system built using HTML, CSS, and JavaScript. This system allows users to add tasks dynamically by entering task details through prompts. Tasks are organized into three columns: **TODO**, **DOING**, and **DONE**.while enforcing a task limit.
 
-1. Before starting this challenge, make sure you have reviewed and corrected your JSL02 project using the provided solution. Your prompts for entering task details should be fully functional and include proper validation checks to ensure accurate user input.
-2. **Check the project user stories in your student dashboard**, make sure you understand what is required for each feature.
+## 🚀 Features
 
-## Overview
+- Users are prompted to enter:
+  - Task Title
+  - Task Description
+  - Task Status (`todo`, `doing`, or `done`)
+- Status input is case-insensitive and validated.
+- Task limit enforced with an alert:
+ " There are enough tasks on your board, please check them in the console"
+- Display tasks in the console:
 
-This project involves creating a **simple task management system** where users can add **up to three new tasks** to an existing task array. Tasks are **stored as objects in an array**, each with a **unique incremental ID**. Users will enter task details via prompts, and the system will allow filtering to view only completed tasks. The project focuses on **array manipulation, user interaction via prompts and alerts, and console logging for task management**.
+  - All tasks as an array
 
-## Key Objectives
+  - Completed tasks only or if no tasks are marked as `done`, a motivational message is logged:  
+  _"No tasks completed, let's get to work!"_  
 
-### Logic & User Interaction
 
-- Store tasks as **objects inside an array** for structured data management.
-- Allow users to **add up to three new tasks** to the existing task list.
-- Ensure each new task has a **unique incremental ID** based on the last task in the array.
-- Prompt users to enter **task details (title, description, status)** and store them in an object.
-- Alert users when they reach the task limit with the message:
-  _"There are enough tasks on your board, please check them in the console."_
-  Implement a **filter function** to display only tasks with the status `"done"`.
-- Log **all tasks** in the console with a clear label for easy review.
-- Log **only completed tasks** (status: `"done"`) in the console under a "Completed Tasks" label for quick reference.
+## 📁 Folder Structure
 
-## Code Quality & Maintainability
+project-root/
+├── index.html # Main HTML file
+├── styles.css # Styling for the board
+├── script.js # JavaScript logic for prompts
+└── assets/ # Logos, icons, and favicons
+└── README.md # Project documentation
+└── images/  # Screenshots
 
-- Use meaningful variable and function names to ensure readability and maintainability.
-- Follow consistent indentation and formatting to enhance code clarity.
-- Include comments explaining key logic and functionality to support future modifications.
+## ✅ Valid Status Options
 
-## Expected Outcome
+When prompted, you can only enter:
+- `todo`
+- `doing`
+- `done`
 
-A **structured and limited task management system** that enables users to add, review, and filter tasks efficiently while ensuring **clean, well-documented, and maintainable code.**
+These can be typed in **any case** (e.g., `TODO`, `Done`, `Doing`).
 
-**Console Log of all and completed tasks**
+## 🧪 How to Run
 
-![console log](./explainer-images/console%20log.png)
+1. Clone or download the repo.
+2. Open `index.html` in a browser.
+3. The JavaScript will prompt you to add tasks until the board reaches its task limit.
+4. Open Developer Tools → Console to see:
+- All tasks
+- Completed tasks or a motivational message
+
+## 📸 Screenshots
+ ###### Example of a prompt
+![Example of a prompt](./images/prompt.png)
+
+###### Example of a limit alert
+![Example of the limit alert](./images/alert.png)
+
+###### Example of tasks dispalyed in the console
+![Example of tasks displayed in the console](./images/console%20log.png)
+
+## 🧑‍💻 Author
+
+Created by _Ayabonga Mtsotso._
+
+---
